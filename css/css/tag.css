@@ -1,0 +1,26 @@
+body {
+    font-size: 40px;
+}
+    
+ul, ol {
+    padding: 0;
+    /* font-size: 90px; */
+}
+
+li {
+    margin-left: 60px;
+    /* font-size: 90px; */
+}
+
+.tag {
+    border: solid 4px;
+    margin: 4px;
+}
+
+.tag label {
+    color: #fff;
+    font-size: 25px;
+    vertical-align: top;
+    margin-right: 10px;
+    padding: 0px 5px 3px 3px;
+}

@@ -1,0 +1,62 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(243, 182, 182);
+    
+}
+
+body {
+    font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+    font-size: 30px; 
+}
+
+header {
+    background-color: rgb(243, 145, 162);
+    grid-area: header;
+    justify-content: left;
+    padding: 30px 750px;
+    
+}
+
+aside {
+    
+    grid-area: aside;
+
+}
+
+main {
+    background-color: palegoldenrod;
+    grid-area: main;
+    ;
+    
+}
+
+footer {
+    background-color: rgb(133, 45, 133);
+    grid-area: footer;
+    
+}
+
+.container { 
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 100px 100vh 100px;
+    grid-template-areas: 'header header' 'aside main' 'footer footer';
+
+    gap: 5px;
+
+    
+}
+
+nav {
+    margin: 5px;
+    padding: 5px 18px;
+    background-color: rgba(248, 163, 230, 0.76);
+    border-radius: 10px;
+    box-shadow: 5px 5px; 
+}
+
+nav:hover {
+    color: seashell;
+}
