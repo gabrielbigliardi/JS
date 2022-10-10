@@ -14,7 +14,8 @@
 
         .static {
             top: 100px;
-            left: 100px; /*a posição static faz com que essas dois valores nao sejam considerados*/
+            left: 100px; /*a posição static faz com que essas dois 
+            valores nao sejam considerados*/
             background-color: steelblue;
         }
 
@@ -42,7 +43,7 @@
         .relative2 {
             position: relative;
             left: 250px;
-            top: 2000px;
+            top: 500px;
             width: 200px;
             height: 200px;
             background-color: slategray;
@@ -58,6 +59,7 @@
         }
 
         .sticky {
+            position: -webkit-sticky; /*safari*/
             position: sticky;
             background-color: #777;
             top: 10px;
