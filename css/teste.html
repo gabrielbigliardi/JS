@@ -5,12 +5,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+        body {
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1.2em;
+        }
+
+        .menu {
+            background-color: #212121;
+            display: flex;
+            flex-direction: column;
+            width: 270px;
+            height: 100vh;
+        }
+
+        .menu ul {
+            padding: 10px 10px 10px 30px;
+        }
+
+        .menu li {
+            
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .logo {
+            display: flex;
+            /* justify-content: space-between; */
+            height: 60px;
+        }
+
+        
+        .logo button {
+            width: 60px;
+            height: 60px;
+            background-color: #212121;
+        }
+        
+        div img {
+            margin: 0px 5px;
+        }
+
+        .logo img {
+            width: 170px;
+        }
+
+
+
+        ul {
+            color: aliceblue;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0;
+        }
+
+        li {
+            text-decoration: none;
+            padding: 10px 40px;
+        }
+
+        .divisao {
+            width: 245px;
+            border: 1px solid rgba(255, 255, 255, 0.411);
+            border-radius: 1px;
+        }
+
+    </style>
 </head>
 <body>
 
-    <input type="button" value="">
-    <input type="button" value="">
-    <input type="button" value="">
+    <div class="menu">
+        <div class="logo">
+            <button></button>
+            <img src="imgs/yt.png">
+
+        </div>
+        <nav class="inicio">
+            <ul>
+                <li>Início</li>
+                <li>Explorar</li>
+                <li>Shorts</li>
+                <li>Inscrições</li>
+                <li>Originais</li>
+                <li>YouTube Music</li>
+            </ul>
+        </nav>
+        <div class="divisao"></div>
+        <nav class="favoritos">
+            <ul>
+                <li>Biblioteca</li>
+                <li>Histórico</li>
+                <li>Seus vídeos</li>
+                <li>Assistir mais tarde</li>
+                <li>Download</li>
+            </ul>
+        </nav>
+        <hr>
+
+        <nav class="canais"> </nav>
+    </div>
     
 </body>
 </html>
