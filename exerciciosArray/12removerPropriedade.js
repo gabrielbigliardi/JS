@@ -10,14 +10,17 @@ function removerPropriedade(objeto, deletado) {
     return copia
 }
 
-removerPropriedade(obj2, "idade")
+console.log(removerPropriedade(obj2, "idade"))
 
 console.log(obj2)
 
-/*
-const removerPropriedade = (objeto,deletado) => {
+
+const removerPropriedade2 = (objeto,deletado) => {
     const copia = Object.assign({}, objeto)
     delete copia[deletado]
     return copia
 }
-*/
+
+console.log(removerPropriedade2(obj3, "nome"))
+
+
