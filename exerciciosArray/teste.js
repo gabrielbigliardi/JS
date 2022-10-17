@@ -34,3 +34,12 @@ console.log('for...in Objeto')
 for (let i in objeto) {
     console.log(i)
 }
+
+console.log('----------------------------------')
+
+const testeSpread = frase => {
+    const resultado = [...frase]
+    return resultado
+}
+
+console.log(testeSpread('ser ou nao ser'))
