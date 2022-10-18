@@ -9,19 +9,21 @@
 
 <body class="conteudo exercicio">
     <div>
+        <!-- onclick="navegarEm5s(event)" -->
         <a espera-um-pouco href="https://google.com.br">Google</a>
     </div>
     <script>
-        function navegarEm5s(e) {
+        function navegarEm5s (e) {
             e.preventDefault()
-            console.log('Saindo em 5s...')
+            console.log('saindo em 5 segundos...')
             setTimeout(() => {
-                const link = e.target //target é elemento html q dispara o envento, ou seja, e.target é o proprio link
+                const link = e.target
                 window.location.href = link.href
-            }, 5000)
+            }, 5000);
         }
+        //target é elemento html q dispara o envento, ou seja, e.target é o proprio link
 
-        // const a = document.querySelector('a')
+        // const a = document.querySelector('a')~
         // a.onclick = navegarEm5s
            // a estrategia acima funciona ao invez de usar o onclick na tag, a vantagem de ter o onclick na tag é para quem estar lendo entender o que está havendo
         

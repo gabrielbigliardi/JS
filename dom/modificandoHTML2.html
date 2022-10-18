@@ -13,16 +13,15 @@
     </div>
     <script>
         const div = document.querySelector('div')
-        div.innerHTML = 'Texto alterado'
-        // div.outerHTML = 'Texto mudado'
-        div.insertAdjacentHTML('beforebegin', '<p>Antes do início </p>')
-        div.insertAdjacentHTML('afterbegin', '<p>Depois do início</p>')
-        div.insertAdjacentHTML('beforeend', '<p>Antes do fim</p>')
-        div.insertAdjacentHTML('afterend', '<p>Depois do fim</p>')
+        div.innerHTML = 'Texto Alterado'
+        // div.outerHTML = 'Texto Alterado'
+        div.insertAdjacentHTML('beforebegin', '<p> Antes Início </p>')
+        div.insertAdjacentHTML('afterbegin', '<p> Depois Início </p>')
+        div.insertAdjacentHTML('beforeend', '<p> Antes Fim </p>')
+        div.insertAdjacentHTML('afterend', '<p> Depois Fim </p>')
 
-        // somente texto (sem tag)
-        console.log(div.innerHTML);
-        console.log(div.innerText);
+        console.log(div.innerHTML)
+        console.log(div.innerText)
     </script>
 </body>
 
