@@ -30,10 +30,12 @@
             </select>
         <button wm-submit>Pesquisar</button>
     </form>
+
     <script>
         const submit = document.querySelector('[wm-submit]')
         submit.onclick = function(e) {
-            e.preventDefault()
+            // e.preventDefault()
+            // e.preventDefault()
 
             const form = e.target.parentNode
             const formData = new FormData (form)
