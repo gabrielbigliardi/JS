@@ -1,3 +1,7 @@
-import { mult } from './helper.js'
+import multi from './helper.js'
+import { formatDate } from './formatters.js'
 
-console.log(mult(2,6))
+console.log(multi(2,6))
+
+const dataFormatada = formatDate(new Date())
+console.log(dataFormatada)
