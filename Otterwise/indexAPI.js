@@ -4,26 +4,41 @@
 // PATCH  --> EDITAR
 // DELETE  --> APAGAR
 
+
 // FAKE API  --> https://jsonplaceholder.typicode.com
+              // https://swapi.dev/api/people/1
 
-// import axios from 'axios'
+import axios from "axios"
+// const axios = require('axios')
 
-// const getPost = async () => {
-//     const response = await axios.get("https://jsonplaceholder.typicode.com/posts")
-//     console.log(response.data)
-//     return response
-// }
 
-// getPost()
-
-fetch('https://jsonplaceholder.typicode.com/posts')
-  .then(response => response.json())
-  .then(json => console.log(json))
-
-// https://swapi.dev/api/people/1
+axios
+  .get("https://jsonplaceholder.typicode.com/")
+  .then(function (response) {
+    console.log(response);
+  });
 
 // axios.get("https://jsonplaceholder.typicode.com/posts")
-// axios.get("https://swapi.dev/api/people/1")
-    // .then(res => res.data)
-    // .then(data => JSON.stringify(data))
-    // .then(dadosString => console.log(dadosString))
+// .then(data => console.log(data))
+  // .then(resp => resp.json())
+// const setPost = async () => {
+//   try{
+//     const response = await axios.get("https://jsonplaceholder.typicode.com/posts/1/comments")
+//     console.log("status: " + response.status)
+//     console.log(response)
+//     // return response.data
+//   } catch(error) {
+//     console.log(error.response.status)
+//   }
+// }
+
+// const userInfo = {
+//   title: 'titulo', body: 'corpo', userId: 13
+// }
+
+// setPost()
+
+
+// fetch('https://jsonplaceholder.typicode.com/posts/1')
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
