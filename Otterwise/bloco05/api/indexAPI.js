@@ -12,11 +12,28 @@ import axios from "axios"
 // const axios = require('axios')
 
 
-axios
-  .get("https://jsonplaceholder.typicode.com/")
-  .then(function (response) {
-    console.log(response);
-  });
+// axios
+//   .get("https://jsonplaceholder.typicode.com/")
+//   .then(function (response) {
+//     console.log(response);
+//   });
+
+
+const url = "https://jsonplaceholder.typicode.com/posts"
+
+const getPosts = async (url) => {
+    try {
+        const response = await axios.get(url)
+        console.log(response.data)
+    } catch(error) {
+        console.log(error.message)
+    }
+}
+
+// getPosts("https://jsonplaceholder.typicode.com/posts")
+getPosts(url)
+
+
 
 // axios.get("https://jsonplaceholder.typicode.com/posts")
 // .then(data => console.log(data))
