@@ -188,7 +188,9 @@
 
 .price {
     background-color: #E7ECFF;
-    height: 938px;
+    background-color: rgba(e7, ec, ff, 0.5);
+    /* opacity: 50%; */
+    height: 804px;
     display: flex;
 }
 
@@ -243,4 +245,69 @@
     height: 32px;
     border: none;
     border-radius: 3px;
+}
+
+
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 216px;
+    background: #E7ECFF;
+}
+
+.footer--landie {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer--yourcompany {
+    font-size: 14px;
+    font-weight: 500;
+    color: #939EA4;
+}
+
+.footer--landie {
+    font-size: 26px;
+    font-weight: 900;
+    color: #37447E;
+}
+
+.footer--purchase {
+    background-color: #111B47;
+    color: white;
+    width: 109px;
+    height: 26px;
+    font-size: 12px;
+    border: none;
+    border-radius: 3px;
+}
+
+.footer--contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer--nav {
+    display: flex;
+    font-size: 14px;
+    gap: 60px;
+}
+
+.footer--nav a {
+    text-decoration: none;
+    color: #6F7CB2;
+
+}
+
+.footer--social {
+    display: flex;
+    gap: 30px;
+}
+
+hr {
+    width: 1110px;
+    margin: auto;
 }
