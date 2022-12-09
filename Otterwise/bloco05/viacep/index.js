@@ -10,26 +10,9 @@ import { searchCepWithArray } from './searchCepWithArray.js'
 
 const ceps = ['96050170', '96077230']
 
-// const cepsToPromises = async (cepArray) => {
-//     try {
-//         const cepPromises = cepArray.map( async (cep) => {return await searchCep(cep)} )
-//         return cepPromises
-//     } catch (e) {
-//         console.log(e.message);
-//     }
-// }
-
-// console.log(cepsToPromises(ceps))
-
-
-
-
-
-
+searchCep(96015300)
 searchCepWithArray(['96050170', '96077230'])
 
-// console.log(searchBananas(ceps))
-// saveToJson(searchBananas, "newTest.json")
 
 
 // export const generateCepListJSON = async (cepList) => {
@@ -54,16 +37,3 @@ searchCepWithArray(['96050170', '96077230'])
 
 
 // const cepPromises = Promise.all(cep.map( async cep => await searchCep(cep) ) )
-
-
-// const cepDataToJsonObj = async () => {
-//     try {
-//         // const cepsToPromises = ;
-//         const cepData = await searchCep(ceps)
-//         console.log(cepData)
-//     } catch (e) {
-//         console.log(e.message);
-//     }
-// }
-
-// cepDataToJsonObj()
