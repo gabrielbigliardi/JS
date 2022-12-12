@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    
+    <div class="container">
+        <form action="">
+
+            <label for="numberOne"> Primeiro número
+                <input type="number" name="numberOne" id="numberOne">
+            </label>
+            <label for="numberTwo"> Segundo número
+                <input type="number" name="numberTwo" id="numberTwo">
+            </label>
+    
+            <label for="operation"> + 
+                <input type="checkbox" name="operation" id="sum" value="sum">
+            </label>
+            <label for="operation"> - 
+                <input type="checkbox" name="operation" id="sub" value="sub"> 
+            </label>
+            <label for="operation"> * 
+                <input type="checkbox" name="operation" id="mul" value="div">
+            </label>
+            <label for="operation"> / 
+                <input type="checkbox" name="operation" id="div" value="div"> 
+            </label>
+
+
+            <!-- <select name="operator" id="operator">
+                <option value="sum">Soma</option>
+                <option value="sub">Subtração</option>
+                <option value="div">Divisão</option>
+                <option value="mul">Multiplicação</option>
+            </select> -->
+
+
+            <button id="result">Resultado</button>
+
+        </form>
+        <span class="resultado"> Resultado: </span>
+        
+
+    </div>
+
+    <script src="./main.js"></script>
+    
+</body>
+</html>
