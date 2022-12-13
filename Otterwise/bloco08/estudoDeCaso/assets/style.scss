@@ -1,0 +1,285 @@
+$primaryFontColor: #e4331c;
+$secundaryFontColor: #ec6454;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, #f8b2a6 0%, #f8b2a6 30%, #fad1ca 30%, #fad1ca 100%);
+}
+
+.contactUs {
+    position: relative;
+    width: 100%;
+    padding: 20px 100px;
+}
+
+.contactUs .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.contactUs .title h2 {
+    color: #fff;
+    font-weight: 500;
+}
+
+.form {
+    grid-area: form;
+}
+
+.info {
+    grid-area: info;
+}
+
+.map {
+    grid-area: map;
+}
+
+.contact {
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas:
+        "form info"
+        "form map";
+    gap: 20px;
+    margin-top: 20px;
+    height: 80vh;
+}
+
+.contact h3 {
+    color: $primaryFontColor;
+    font-weight: 500;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+/* form */
+
+.formBox {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr 8fr 2fr;
+    grid-template-areas:
+        "firstName lastName"
+        "email cellphone"
+        "message message"
+        "button none";
+    gap: 20px;
+}
+
+.formBox .inputFirstName {
+    grid-area: firstName;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    & span {
+        color: $secundaryFontColor;
+        font-weight: 500;
+        font-size: 0.9em;
+    }
+
+    & input {
+        padding: 10px;
+        font-size: 1.1em;
+        border: 1px solid #333;
+    }
+}
+
+.formBox .inputLastName {
+    grid-area: lastName;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    & span {
+        color: $secundaryFontColor;
+        font-weight: 500;
+        font-size: 0.9em;
+    }
+
+    & input {
+        padding: 10px;
+        font-size: 1.1em;
+        border: 1px solid #333;
+    }
+}
+
+.formBox .inputEmail {
+    grid-area: email;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    & span {
+        color: $secundaryFontColor;
+        font-weight: 500;
+        font-size: 0.9em;
+    }
+
+    & input {
+        padding: 10px;
+        font-size: 1.1em;
+        border: 1px solid #333;
+    }
+}
+
+.formBox .inputCellphone {
+    grid-area: cellphone;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    & span {
+        color: $secundaryFontColor;
+        font-weight: 500;
+        font-size: 0.9em;
+    }
+
+    & input {
+        padding: 10px;
+        font-size: 1.1em;
+        border: 1px solid #333;
+    }
+}
+
+.formBox .inputMessage {
+    grid-area: message;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    gap: 5px;
+
+    & span {
+        color: $secundaryFontColor;
+        font-weight: 500;
+        font-size: 0.9em;
+    }
+
+    & textarea {
+        padding: 10px;
+        font-size: 1.1em;
+        border: 1px solid #333;
+        height: 100%;
+    }
+}
+
+
+.formBox .button {
+    max-width: 150px;
+
+    & input {
+        grid-area: button;
+        margin: auto;
+        background: #ff578b;
+        color: #fff;
+        border: none;
+        width: 100%;
+        font-size: 1.1em;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 14px 15px;
+    }
+}
+
+
+// CEP
+
+.contact-cep {
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    background: #f8b2a6;
+
+    & h3 {
+        color: #fff;
+        margin-bottom: 10px;
+        font-size: 1.4em;
+        font-weight: 500;
+    }
+    & label {
+        color: $secundaryFontColor;
+        font-weight: 500;
+        font-size: 0.9em;
+    } 
+    & input {
+        padding: 10px;
+        font-size: 1.1em;
+        border: 1px solid #333;
+    }
+}
+
+
+
+.map {
+    padding: 0;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Responsive Design */
+
+@media (max-width:991px) {
+    body {
+        background: #f8b2a6;
+    }
+
+    .contactUs {
+        padding: 20px;
+    }
+
+    .box {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "form"
+            "info"
+            "map";
+    }
+
+    .formBox .row50 {
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+    }
+
+    .inputBox {
+        width: 100%;
+    }
+
+    .contact {
+        padding: 30px;
+    }
+
+    .map {
+        min-height: 300px;
+        padding: 0;
+    }
+}
