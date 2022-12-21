@@ -1,8 +1,0 @@
-{
-    "db": {
-        "host": "localhist",
-        "port": 5432,
-        "user": "usuario",
-        "pass": 123456
-    }
-}
