@@ -1,19 +1,17 @@
-//console.log(0 >= undefined);
+const obj1 = { a: 1, b: 2}
 
-//console.log('abc' === 'acb');
+const obj2 = [ [3, "tres"], [4, "quatro"]]
 
-//var anyString = 'Brave new world';
+const obj3 = {'a': 1, "banana": 99}
 
-//console.log("A letra no índice 0 é '" + anyString.charAt(0)   + "'");
-/*console.log("A letra no índice 1 é '" + anyString.charAt(1)   + "'");
-console.log("A letra no índice 2 é '" + anyString.charAt(2)   + "'");
-console.log("A letra no índice 3 é '" + anyString.charAt(3)   + "'");
-console.log("A letra no índice 4 é '" + anyString.charAt(4)   + "'");
-console.log("A letra no índice 99 é '" + anyString.charAt(999) + "'");*/
+const obj1Entries = Object.entries(obj1)
 
-let estaContido = false
-console.log(estaContido);
-if (!estaContido) {
-    console.log('dentro do if');
-}
-console.log('fora do if');
+const obj2FromEntries = Object.fromEntries(obj2)
+
+console.log(obj1Entries);
+console.log(obj2FromEntries);
+
+const chaves = Object.keys(obj3)
+const valores = Object.values(obj1)
+
+console.log(valores, chaves);
