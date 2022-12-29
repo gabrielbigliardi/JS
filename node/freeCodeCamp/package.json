@@ -4,8 +4,7 @@
   "description": "",
   "main": "1-intro.js",
   "scripts": {
-    "start": "node 10-npm-dependencies.js",
-    "dev": "nodemon 10-npm-dependencies.js"
+    "start": "node 11-readFile-async.js"
   },
   "keywords": [],
   "author": "",
