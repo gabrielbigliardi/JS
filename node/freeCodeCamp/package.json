@@ -4,7 +4,7 @@
   "description": "",
   "main": "1-intro.js",
   "scripts": {
-    "start": "node 11-readFile-async.js"
+    "start": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
