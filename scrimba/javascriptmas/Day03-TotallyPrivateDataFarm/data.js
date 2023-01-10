@@ -1,4 +1,5 @@
-export default [
+// export default [
+module.exports = [
     {
        "name":{
           "title":"Mr",
@@ -110,3 +111,5 @@ export default [
        }
     }
  ]
+
+ console.log(module);

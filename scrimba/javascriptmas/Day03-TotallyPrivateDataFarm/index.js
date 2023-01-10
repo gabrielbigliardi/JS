@@ -1,4 +1,5 @@
-import userData from "./data.js";
+// import userData from "./data.js";
+let userData = require('./data.js')
 
 /* Totally Private Data Farm 
 
