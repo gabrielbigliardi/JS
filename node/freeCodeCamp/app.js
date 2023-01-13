@@ -2,8 +2,12 @@ const EventEmitter = require('events')
 
 const customEmitter = new EventEmitter()
 
-customEmitter.on('response', () => {
-    console.log(`data recieved`);
+customEmitter.on('response', (name, id) => {
+    console.log(`data recieved. user: ${name}. id: ${id}.`);
 })
 
-customEmitter.emit('response')
+customEmitter.on('response', () => {
+    console.log(`other logic`);
+})
+
+customEmitter.emit('response', 'Jumba', 13)
