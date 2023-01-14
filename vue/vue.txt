@@ -1,0 +1,2 @@
+Dentro do framework, diretivas são propriedades personalizadas, comçadas com 'v-', usadas para manimular a dom, 
+para interpolar determinados valores, para sincronizar dados e coisas do tipo.
