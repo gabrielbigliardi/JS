@@ -1,13 +1,7 @@
-const EventEmitter = require('events')
+const { createReadStream } = require('fs')
 
-const customEmitter = new EventEmitter()
+const stream = createReadStream('./content/big.txt')
 
-customEmitter.on('response', (name, id) => {
-    console.log(`data recieved. user: ${name}. id: ${id}.`);
+stream.on('data', (result) => {
+    console.log(result);
 })
-
-customEmitter.on('response', () => {
-    console.log(`other logic`);
-})
-
-customEmitter.emit('response', 'Jumba', 13)
