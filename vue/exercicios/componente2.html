@@ -2,18 +2,38 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Componente</title>
+    <title>Componente 2</title>
     <link rel="stylesheet" href="/css/estilo.css">
     <script src="/js/vue.min.js"></script>
 </head>
 <body class="exercicio">
 
     <div id="app">
-
+        <count></count>
+        <count></count>
+        <count></count>
     </div>
 
     <script>
-        
+        Vue.component('count', {
+            data: function() {
+                return {
+                    count: 0
+                }
+            },
+            methods: {
+                add() {
+                    this.count++
+                }
+            },
+            template: `
+                <div>
+                    <span>{{count}}</span>
+                    <button @click="add">+</button>
+                </div>
+            `
+
+        })
 
         new Vue({
             el: "#app"
