@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #23252C;
+    font-family: Inter, sans-serif;
+}
+
+.app-- {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 50px;
+    width: 317px;
+    background-color: #1A1B21;
+    border-radius: 10px;
+    
+}
+
+
+
+/* main */
+main {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: auto;
+    /* margin-right:auto; */
+    
+}
+
+main > * {
+    margin: 0;
+}
+
+main img {
+    margin-bottom:  20px;
+}
+
+.main--name {
+    font-size: 25px;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.main--job {
+    font-size: 13px;     
+    font-weight: 100;
+    margin-bottom: 10px;
+    letter-spacing: 0.03em;
+    color: #F3BF99;
+}
+
+.main--site {
+    font-size: 10px;
+    font-weight: 100;
+    letter-spacing: 0.05em;
+}
+
+
+
+                                                /* buttons */
+.main--buttons {
+     display: flex;
+     margin: 15px 0;
+     /* width: 115px; */
+}
+
+.main--buttons button {
+    width: 115px; 
+    height: 35px;
+    font-size: 14px;
+    border-radius: 7px;
+    /* justify-content: space-between; */
+}
+
+
+                                    /* email */
+.main--email-button img {
+    padding: 0 5px 0 0;
+}
+
+.main--email-content-button {
+    display: flex;
+    padding: 9px 29px;
+    margin: 0 7px 0 0;
+    border: none;
+}
+
+
+
+                                    /* linkedin */
+.main--linkedin-content-button {
+    display: flex;
+    background-color: #5093E2;
+    color: white;
+    padding: 9px 19px;
+    margin: 0 0 0 7px;
+    border: none;
+}
+
+.main--linkedin-button img {
+    padding: 0.3px 5px 0 0;
+}
+
+
+
+
+
+                                                /* about */
+.about-- {
+    color: white;
+    margin:20px 35px 0px 35px;
+}
+
+.about--title {
+    font-size: 16px;
+    margin: 0;
+}
+
+.about--info {
+    font-size: 10px;
+    font-weight: 100;
+    line-height: 1.4em;
+    margin-top: 5px;
+}
+
+
+
+                                                /* interests */
+.interests-- {
+    color: white;
+    margin:10px 35px 30px 35px;
+}
+
+.interests--title {
+    font-size: 16px;
+    margin: 0px;
+}
+
+.interests--info {
+    font-size: 10px;
+    font-weight: 100;
+    line-height: 1.4em;
+    margin: 0;
+    margin-top: 7px;
+    margin-bottom: 10px;
+}
+
+
+
+                                                /* footer */
+.footer-- {
+    display: flex;
+    height: 64px;
+    justify-content: center;
+    align-items: center;    
+    /* align-content: center; */
+    background-color: #161619;
+    border-radius: 0 0 10px 10px;
+}
+
+.footer-- img {
+    margin: 10px;
+    /* justify-content: space-around; */
+    /* align-content: center; */
+    /* align-items: center; */
+}
+
+
