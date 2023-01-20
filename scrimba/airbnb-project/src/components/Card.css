@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 176px;
+
+    font-size: 12px;
+}
+
+.card--stats {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+}
+
+.card--star {
+    width: 14px;
+}
+
+.gray {
+    color: #918E9B;
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Navbar.css'
-import logo from './imgs/airbnb-logo.png'
+import logo from '../imgs/airbnb-logo.png'
 
 
 export default function Navbar() {

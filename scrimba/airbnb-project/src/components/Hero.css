@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    margin: 26px 36px;
+}
+
+.hero--img {
+    margin: auto;
+    width: 796px;
+}
+
+.hero h1 {
+    font-weight: 600;
+}
+
+.hero h3 {
+    font-weight: 300;
+}
+
