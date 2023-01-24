@@ -5,7 +5,7 @@ import star from '../imgs/star.png'
 
 
 export default function Card(props) {
-    // console.log(props)
+    console.log(props)
 
     let badgeText
     if(props.openSpots === 0) {
@@ -14,17 +14,17 @@ export default function Card(props) {
         badgeText = 'ONLINE'
     }
 
+    // {/* {!props.openSpots && <span className='card--badge'>SOLD OUT</span>} */}
+    // {/* <span className='card--openspots'>{props.openSpots > 0 ? 'ONLINE' : 'SOLD OUT'}</span> */}
     return (
         <div className='card'>
             {badgeText && <div className='card--badge'>{badgeText}</div>}
-            <img className='card--img' src={ require(`../imgs/${props.img}`) } alt="Katie Zaferes" />
-            {/* {!props.openSpots && <span className='card--badge'>SOLD OUT</span>} */}
-            {/* <span className='card--openspots'>{props.openSpots > 0 ? 'ONLINE' : 'SOLD OUT'}</span> */}
+            <img className='card--img' src={ require(`../imgs/${props.coverImg}`) } alt="Katie Zaferes" />
             <div className='card--stats'>
                 <img className='card--star' src={star} alt="Star"  />
-                <span>{props.rating}</span>
-                <span className='gray' >({props.reviewCount}) •</span>
-                <span className='gray' >{props.country}</span>
+                <span>{props.stats.rating}</span>
+                <span className='gray' >({props.stats.reviewCount}) •</span>
+                <span className='gray' >{props.location}</span>
             </div>
             <p>{props.title}</p>
             <p><strong>From ${props.price}</strong> / person</p>
