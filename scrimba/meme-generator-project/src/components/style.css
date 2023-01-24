@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    margin: 0;
+}
+
+.meme--nav {
+    /* background-color: #6B2285; */
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+}
+
+.troll-face {
+    width: 31px;
+    height: 26px;
+    margin: 10px;
+}
+
+.meme--title {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    flex-grow: 1;
+}
+
+.meme--description {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0 10px;
+}
+
+
+/* MEME */
+.meme {
+    padding: 20px;
+}
+
+.meme input {
+    margin: 10px; 
+    border-radius: 3px;
+}
+
+.meme--inputs {
+    display: flex;
+}
+
+.meme--button {
+    width: 447px;
+    height: 44px;
+    margin: 10px;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    color: #fff;
+    border-radius: 6px;
+    font-weight: 600;
+}
