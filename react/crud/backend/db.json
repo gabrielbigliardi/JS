@@ -1,0 +1,11 @@
+{
+    "users": [{
+        "id": 1,
+        "name": "Jumba Lina",
+        "email": "jumbalina@fofa.com"
+    }, {
+        "id": 2,
+        "name": "Aurora Maria",
+        "email": "aurora.maria@dog.com"
+    }]
+}
