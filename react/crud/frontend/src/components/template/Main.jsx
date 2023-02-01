@@ -3,7 +3,7 @@ import React from 'react'
 import Header from './Header'
 
 export default function Main(props) {
-    console.log(props);
+    // console.log(props);
     return (
         <React.Fragment>
             <Header {...props}/>
