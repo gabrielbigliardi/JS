@@ -16,9 +16,14 @@
       "price": 5000.89
     },
     {
-      "name": "JBL",
+      "name": "JBL GO 2",
       "price": "299",
       "id": 5
+    },
+    {
+      "name": "Monitor LG",
+      "price": "870.99",
+      "id": 6
     }
   ]
 }
