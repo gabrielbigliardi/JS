@@ -14,6 +14,11 @@
       "id": 3,
       "name": "Samsung S20+",
       "price": 5000.89
+    },
+    {
+      "name": "JBL",
+      "price": "299",
+      "id": 5
     }
   ]
 }
