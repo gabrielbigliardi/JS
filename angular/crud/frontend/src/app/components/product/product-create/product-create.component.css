@@ -1,0 +1,14 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+mat-card {
+    padding: 15px;
+}
+
+div {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
