@@ -40,7 +40,8 @@ module.exports = {
         // new MiniCssExtractPlugin({ filename: 'estilo.css' }),
         new MiniCssExtractPlugin({ filename: 'estilo.css' }),
         new HtmlWebpackPlugin({
-            title: 'Development'
+            title: 'Development',
+            template: './src/index.html'
         }),
         new CopyPlugin({
             patterns: [
