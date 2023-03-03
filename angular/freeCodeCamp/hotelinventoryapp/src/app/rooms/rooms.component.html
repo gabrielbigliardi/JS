@@ -1,13 +1,44 @@
-
 <h1 [innerHTML]="hotelName"></h1>
 
-<h2 [hidden]="hiddenRooms">Numero de quartos = {{numberOfRooms}}</h2>
 
+
+<h2 
+    [ngStyle]="{'color' : rooms.availableRooms > 0 ? 'green' : 'red'}" 
+    [hidden]="hiddenRooms">Numero de quartos = {{rooms.availableRooms}}
+</h2>
+
+
+<!-- {{ rooms.availableRooms }} -->
 <button (click)="toggle()">Hide</button>
 
+<hr>
 
-{{ rooms.availableRooms ?? 'No rooms' }}
 
-<div *ngIf="rooms?.availableRooms">
+
+<div *ngIf="rooms.availableRooms > 5">
     Rooms List
+    <table class="table">
+        <tr>
+            <th>Index</th>
+            <th>Even/Odd</th>
+            <th>Room Number</th>
+            <th>Room Type</th>
+            <th>Room Price</th>
+            <th>Room Amenities</th>
+            <th>Checkin Time</th>
+            <th>CheckOut Time</th>
+            <th>Room Rating</th>
+        </tr>
+        <tr [ngClass]="e ? 'even' : 'odd'" *ngFor="let room of roomList; let e=even; let o=odd; let i = index">
+            <td>{{ i }}</td>
+            <td>{{ e ? 'Even' : 'Odd' }}</td>
+            <td>{{ room.roomNumber }}</td>
+            <td>{{ room.roomType | uppercase }}</td>
+            <td>{{ room.price | currency: 'BRL' }}</td>
+            <td>{{ room.amenities }}</td>
+            <td>{{ room.checkinTime | date :'short' }}</td>
+            <td>{{ room.checkoutTime | date : 'dd/MM/yyyy' }}</td>
+            <td>{{ room.rating | number : '1.1-2' : 'en-US' }}</td>
+        </tr>
+    </table>
 </div>
