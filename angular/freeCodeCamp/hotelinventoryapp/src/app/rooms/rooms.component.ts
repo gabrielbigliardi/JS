@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { HeaderComponent } from './../header/header.component';
+import { AfterViewChecked, AfterViewInit, ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
 import { Room, RoomList } from './rooms';
 
 @Component({
@@ -7,7 +8,7 @@ import { Room, RoomList } from './rooms';
   styleUrls: ['./rooms.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class RoomsComponent implements OnInit {
+export class RoomsComponent implements OnInit, AfterViewInit, AfterViewChecked {
 
   hotelName = 'Jumba Hotel'
 
@@ -35,6 +36,10 @@ export class RoomsComponent implements OnInit {
   // constructor() {}
 
   ngOnInit(): void { 
+
+    console.log(this.cabecalho);
+    
+
     this.roomList = [
       {
         roomNumber: 1,
@@ -86,7 +91,17 @@ export class RoomsComponent implements OnInit {
 
 
  
-  
+ @ViewChild(HeaderComponent, { static: true }) cabecalho! : HeaderComponent 
+ 
 
+ ngAfterViewInit(): void {
+  // console.log(this.cabecalho);
+  this.cabecalho.title = 'banana'
+}
+
+ngAfterViewChecked(): void {
+  
+  // this.cabecalho.title = 'banana'
+ }
 
 }
