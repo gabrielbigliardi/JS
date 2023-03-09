@@ -1,0 +1,8 @@
+<div class="aula">
+    <h2>If-Render</h2>
+    <div *ngIf="canShow">Mostrado por que foi permitido!</div>
+    <div *ngIf="name === 'Jumba'; else nameNotFound">O nome é Jumba</div>
+    <ng-template #nameNotFound >
+        <div>Se não é Jumba não quero!</div>
+    </ng-template>
+</div>
