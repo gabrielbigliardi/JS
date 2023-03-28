@@ -1,3 +1,4 @@
+import { RoomsService } from './services/rooms.service';
 import { HeaderComponent } from './../header/header.component';
 import { AfterViewChecked, AfterViewInit, ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
 import { Room, RoomList } from './rooms';
@@ -33,46 +34,17 @@ export class RoomsComponent implements OnInit, AfterViewInit, AfterViewChecked {
 
   roomList: RoomList[] = []
 
-  // constructor() {}
+  constructor(private roomsService: RoomsService) {}
 
   ngOnInit(): void { 
 
-    console.log(this.cabecalho);
+    this.roomList = this.roomsService.getRooms();
     
 
-    this.roomList = [
-      {
-        roomNumber: 1,
-        roomType: 'Suite',
-        amenities: 'air conditioner, wi-fi, tv',
-        price: 250,
-        checkinTime: new Date('11-Nov-2021'),
-        checkoutTime: new Date('12-Nov-2021'),
-        rating: 4.5,
-      }, {
-        roomNumber: 2,
-        roomType: 'Deluxe',
-        amenities: 'air conditioner, wi-fi, tv, kitchen',
-        price: 350,
-        checkinTime: new Date('11-Nov-2021'),
-        checkoutTime: new Date('12-Nov-2021'),
-        rating: 4.732,
-  
-      }, {
-        roomNumber: 3,
-        roomType: 'Private Suite',
-        amenities: 'air conditioner, wi-fi, tv, kitchen',
-        price: 500,
-        checkinTime: new Date('11-Nov-2021'),
-        checkoutTime: new Date('12-Nov-2021'),
-        rating: 4.8,
-  
-      }
-    ]
   }
-
+  
   selectedRoom!: RoomList
-
+  
   selectRoom(room: RoomList) {
     // console.log(room)
     this.selectedRoom = room
@@ -88,20 +60,56 @@ export class RoomsComponent implements OnInit, AfterViewInit, AfterViewChecked {
     }
     this.roomList = [ ...this.roomList, room]
   }
-
-
- 
- @ViewChild(HeaderComponent, { static: true }) cabecalho! : HeaderComponent 
- 
-
- ngAfterViewInit(): void {
-  // console.log(this.cabecalho);
-  this.cabecalho.title = 'banana'
-}
-
-ngAfterViewChecked(): void {
   
-  // this.cabecalho.title = 'banana'
- }
+  
+  
+  @ViewChild(HeaderComponent, { static: true }) cabecalho! : HeaderComponent 
+  
+  
+  ngAfterViewInit(): void {
+    // console.log(this.cabecalho);
+    this.cabecalho.title = 'banana'
+  }
+  
+  ngAfterViewChecked(): void {
+    
+    // this.cabecalho.title = 'banana'
+  }
 
 }
+
+
+
+
+
+
+
+// this.roomList = [
+//   {
+//     roomNumber: 1,
+//     roomType: 'Suite',
+//     amenities: 'air conditioner, wi-fi, tv',
+//     price: 250,
+//     checkinTime: new Date('11-Nov-2021'),
+//     checkoutTime: new Date('12-Nov-2021'),
+//     rating: 4.5,
+//   }, {
+//     roomNumber: 2,
+//     roomType: 'Deluxe',
+//     amenities: 'air conditioner, wi-fi, tv, kitchen',
+//     price: 350,
+//     checkinTime: new Date('11-Nov-2021'),
+//     checkoutTime: new Date('12-Nov-2021'),
+//     rating: 4.732,
+
+//   }, {
+//     roomNumber: 3,
+//     roomType: 'Private Suite',
+//     amenities: 'air conditioner, wi-fi, tv, kitchen',
+//     price: 500,
+//     checkinTime: new Date('11-Nov-2021'),
+//     checkoutTime: new Date('12-Nov-2021'),
+//     rating: 4.8,
+
+//   }
+// ]
