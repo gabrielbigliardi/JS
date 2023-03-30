@@ -31,6 +31,8 @@ export class RoomsComponent implements OnInit, AfterViewInit, AfterViewChecked {
     bookedRooms: 5,
   }
 
+  randomData: string = ''
+
 
   roomList: RoomList[] = []
 
@@ -38,7 +40,9 @@ export class RoomsComponent implements OnInit, AfterViewInit, AfterViewChecked {
 
   ngOnInit(): void { 
 
-    this.roomList = this.roomsService.getRooms();
+    // this.roomsService.getData().subscribe(() => {
+    //   this.randomData = 
+    // });
     
 
   }

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { RoomList } from '../rooms';
 
@@ -36,9 +37,12 @@ export class RoomsService {
     }
   ]
 
-  constructor() { }
+  constructor(private http: HttpClient) {}
 
-  getRooms() {
-    return this.roomList
+  // getData async<Observable>() {
+  //   return this.http.get<Observable>('/1')
+  // }
+  getData() {
+    return this.http.get<any>('/1')
   }
 }
