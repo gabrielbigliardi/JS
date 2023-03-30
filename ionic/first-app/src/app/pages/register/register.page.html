@@ -1,0 +1,87 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Indique seu sexo:</ion-card-title>
+    </ion-card-header>
+    <ion-item>
+      <ion-radio-group value="sex">
+        <ion-radio value="man">Masculino</ion-radio><br/>
+      </ion-radio-group>
+    </ion-item>
+    <ion-item>
+      <ion-radio-group>
+        <ion-radio value="woman">Mulher</ion-radio><br />
+      </ion-radio-group>
+    </ion-item>
+    <ion-item>
+      <ion-radio-group>
+        <ion-radio value="other">Outro</ion-radio><br />
+      </ion-radio-group>
+    </ion-item>
+  </ion-card>
+
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>Informe seus dados:</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-input label="Nome" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Email" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Senha" type="password" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Confirme sua senha" type="password" labelPlacement="floating" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Telefone" type="tel" labelPlacement="floating"></ion-input>
+      </ion-item>
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>Endereço</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-input label="Rua" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Número" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Bairro" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Cidade" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Estado" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="CEP" type="number" labelPlacement="floating"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button size="full"  color="dark" >Register</ion-button>
+
+</ion-content>

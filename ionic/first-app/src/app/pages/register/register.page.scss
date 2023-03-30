@@ -2,6 +2,6 @@ ion-content {
     --background: var(--ion-color-success);
 }
 
-ion-button[color="dark"] {
-    text-transform: initial;
+ion-button {
+    margin: 10px;
 }

@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Pickup-call</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <img src="https://staticmapmaker.com/img/google-placeholder.png">
+
+  <ion-card>
+    <ion-card-content>
+      <p>Address: Fake Street, 123</p>
+      <p>Complement: Apto.45</p>
+      <p>Neighborhood: Neigh</p>
+      <p>Zip code: 1234567</p>
+      <p>City - State</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item lines="inset">
+      <ion-textarea label="Notes" labelPlacement="floating"></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-button size="full" color="success">Create Pickup Call</ion-button>
+
+</ion-content>
