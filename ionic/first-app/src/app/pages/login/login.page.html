@@ -8,14 +8,22 @@
         </ion-card-header>
       
         <ion-card-content>
+
           <ion-item>
             <ion-input label="Email" type="email" labelPlacement="floating" placeholder="Enter text" formControlName="email"></ion-input>
           </ion-item>
+          <app-error-message [field]="$any(form.get('email'))" error="required" message="Email is mandatory"></app-error-message>
+          <app-error-message [field]="$any(form.get('email'))" error="email" message="Email is invalid"></app-error-message>
+          <!-- <ion-label color="danger" *ngIf="form.get('email')?.touched && form.get('email')?.errors?.['email']">Email is invalid</ion-label> -->
+
           <ion-item>
             <ion-input label="Senha" type="password" labelPlacement="floating" placeholder="Enter text" formControlName="password"></ion-input>
           </ion-item>
-          <ion-button color="dark" fill="clear" size="full">Forgot email/password</ion-button>
-          <ion-button color="success" size="full" (click)="login()">Login</ion-button>
+          <app-error-message [field]="$any(form.get('password'))" error="required" message="Password is mandatory"></app-error-message>
+          <!-- <ion-label color="danger" *ngIf="form.get('password')?.touched && form.get('password')?.errors?.['required']">Password is mandatory</ion-label> -->
+
+          <ion-button color="dark" fill="clear" size="full" [disabled]="!form.get('email')?.valid">Forgot email/password</ion-button>
+          <ion-button color="success" size="full" (click)="login()" [disabled]="!form.valid">Login</ion-button>
           <ion-button color="success" fill="clear" size="full" (click)="register()">Register</ion-button>
         </ion-card-content>
       </ion-card>
