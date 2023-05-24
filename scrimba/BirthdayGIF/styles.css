@@ -6,7 +6,7 @@ body {
 }
 
 h1, h2, h3, h4, p {
-    text-shadow: 0 0 1px black;
+    text-shadow: 0 0 5px #00000050;
 }
 
 #bff-img {
@@ -75,7 +75,7 @@ h1, h2, h3, h4, p {
 }
 
 #gift-img-badass:hover {
-    background-image: url("images/badass.gif");
+    background-image: url("images/scott.gif");
 }
 
 #gift-img-cheers:hover {
@@ -91,3 +91,4 @@ h1, h2, h3, h4, p {
 a {
     color: white;
 }
+
