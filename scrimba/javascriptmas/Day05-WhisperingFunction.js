@@ -13,7 +13,7 @@ output: "shh... the kittens are sleeping"
 Hint: endsWith and slice
 */
 
-function whisper(sentence) {
+function whisper1(sentence) {
     const sentenceLower = sentence.toLowerCase()
     
     let shhSentence = ''
@@ -24,6 +24,14 @@ function whisper(sentence) {
     } else {
         return shhSentence
     } 
+}
+
+function whisper2(str){
+    if(str.endsWith("!")){
+        // scrimba!
+        return "shh... " + str.slice(0, -1).toLowerCase();
+    }
+    return "shh... " + str.toLowerCase();
 }
 
 console.log(whisper("PLEASE STOP SHOUTING."));

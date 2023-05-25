@@ -55,4 +55,27 @@ function transformData(data){
     return dataHack
 }
 
+
+
+console.log(transformData(userData));
+
+
+
+
+
+function transformData2(data){
+    // use map to loop through the data
+    return data.map(({name, dob}) => {
+        // return an object with the two new properties
+        // concat the first and last name
+        
+         // create a new date object, passing in the dob
+        // format by calling toDateString() method
+        return {
+            fullName: `${name.first} ${name.last}`,
+            birthday: new Date(dob.date).toDateString()
+        } 
+    })
+}
+
 console.log(transformData(userData));
