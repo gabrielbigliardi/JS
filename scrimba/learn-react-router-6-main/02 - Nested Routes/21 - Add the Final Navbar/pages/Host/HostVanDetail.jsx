@@ -1,5 +1,5 @@
 import React from "react"
-import { useParams, Link, Outlet } from "react-router-dom"
+import { useParams, Link, Outlet, NavLink } from "react-router-dom"
 
 export default function HostVanDetail() {
     const { id } = useParams()
@@ -14,6 +14,15 @@ export default function HostVanDetail() {
     if (!currentVan) {
         return <h1>Loading...</h1>
     }
+
+
+
+    const activeStyles = {
+        fontWeight: "bold",
+        textDecoration: "underline",
+        color: "#161616"
+    }
+
     return (
         <section>
             <Link
@@ -35,8 +44,49 @@ export default function HostVanDetail() {
                         <h4>${currentVan.price}/day</h4>
                     </div>
                 </div>
+
+                <nav className="host-van-detail-nav">
+
+                    <NavLink
+                        to="."
+                        end
+                        style={({ isActive }) => isActive ? activeStyles : null}                                        
+                    >
+                        Details
+                    </NavLink>
+                    <NavLink
+                        to="pricing"
+                        style={({ isActive }) => isActive ? activeStyles : null}                    
+                    >
+                        Pricing
+                    </NavLink>
+                    <NavLink
+                        to="photos"
+                        style={({ isActive }) => isActive ? activeStyles : null}
+                    >
+                        Photos
+                    </NavLink>
+
+                </nav>
+
                 <Outlet />
             </div>
         </section>
     )
 }
+
+
+
+
+
+/**
+ * Challenge: Add the links for the navbar! Check the 
+ * Figma design slide to see what the text is.
+ * 
+ * Make it so the link style changes to more clearly
+ * indicate which route we're currently on.
+ * 
+ * Remember, "Details" leads to /host/vans/:id, not
+ * /host/vans/:id/details, so you'll need to employ a
+ * trick we recently learned for that to work.
+ */
