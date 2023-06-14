@@ -257,9 +257,6 @@ i[class*='van-type-'] {
     text-decoration: none;
 }
 
-.van-detail-container .back-button:visited {
-    
-}
 
 .van-detail-container .back-button span {
     text-decoration: underline;
@@ -354,4 +351,25 @@ i[class*='van-type-'] {
 
 .host-van-info p {
     margin-block: 10px;
+}
+
+
+.host--vans-detail {
+    background-color: white;
+    padding: 25px;
+}
+
+.host--van-image {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.host--van-type {
+    color: white;
+    background-color: #E17654;
+}
+
+.host--van-name {
+    font-weight: bold;
+    font-size: 2rem;
 }

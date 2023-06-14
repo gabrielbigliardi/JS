@@ -12,7 +12,16 @@ import Layout from "./components/Layout"
 import HostLayout from "./components/HostLayout"
 
 import "./server"
-
+  /**
+   * Thought experiment:
+   * 
+   * Re-write the vans route as a nested route. Because there's no shared
+   * UI between /vans and /vans/:id, the parent "vans" route won't have its
+   * own `element` prop, just a `path` prop.
+   * 
+   * Hint: you're not creating a Layout Route (since that's only for
+   * shared UI), but you are using another kind of "pathless" route...
+   */
 function App() {
   return (
     <BrowserRouter>
@@ -20,8 +29,11 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="vans" element={<Vans />} />
-          <Route path="vans/:id" element={<VanDetail />} />
+
+          <Route path="vans" >
+            <Route index element={<Vans/>}/>
+            <Route path=":id" element={<VanDetail />} />
+          </Route>
           
           <Route path="host" element={<HostLayout />}>
             <Route index element={<Dashboard />} />

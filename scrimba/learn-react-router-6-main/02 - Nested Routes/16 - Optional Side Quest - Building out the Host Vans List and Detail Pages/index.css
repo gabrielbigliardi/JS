@@ -317,3 +317,24 @@ i[class*='van-type-'] {
     text-decoration: underline;
     font-weight: 600;
 }
+
+
+
+/* .hostVans--list {
+    display: flex;
+    flex-direction: row;
+
+} */
+
+.hostVan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 15px;
+}
+
+.hostVan--img {
+    height: 65px;
+}

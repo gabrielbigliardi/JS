@@ -1,15 +1,40 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route, Link, Outlet } from "react-router-dom";
+import { BrowserRouter, Routes, Route, NavLink, Outlet } from "react-router-dom";
 
 function Layout() {
+
+  const myStyle = {
+    fontWeight: "bold",
+    color: "red",
+    textDecoration: "underline"
+  }
+
   return (
     <div>
       <h3>Welcome to my page!</h3>
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+        <NavLink 
+                to="/"
+                className={(obj) => obj.isActive ? "myLink" : null}
+        >
+                    Home
+        </NavLink>
+
+        <NavLink 
+                to="/about"
+                className={(obj) => obj.isActive ? "myLink" : ""}
+        >
+                    About
+        </NavLink>
+
+        <NavLink 
+                to="/contact"
+                // className={({isActive}) => isActive ? "myLink" : null}
+                style={({isActive}) => isActive ? myStyle : null}
+        >
+                    Contact
+        </NavLink>
       </nav>
       <Outlet />
     </div>
