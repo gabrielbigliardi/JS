@@ -13,13 +13,17 @@ export default function Vans() {
             .then(data => setVans(data.vans))
     }, [])
     
+    const displayedVans = typeFilter 
+        ? vans.filter(van => van.type === typeFilter) 
+        : vans
+
     /**
      * Challenge: filter the list of vans based on the `typeFilter`
      * we created earlier. For now, just enter "simple", "luxury",
      * or "rugged" into the search param in the URL to check your work.
      */
 
-    const vanElements = vans.map(van => (
+    const vanElements = displayedVans.map(van => (
         <div key={van.id} className="van-tile">
             <Link to={`/vans/${van.id}`}>
                 <img src={van.imageUrl} />
