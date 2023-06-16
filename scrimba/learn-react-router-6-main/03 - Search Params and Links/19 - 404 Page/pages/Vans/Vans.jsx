@@ -2,8 +2,8 @@ import React from "react"
 import { Link, useSearchParams } from "react-router-dom"
 
 export default function Vans() {
-    const [searchParams, setSearchParams] = useSearchParams()
     const [vans, setVans] = React.useState([])
+    const [searchParams, setSearchParams] = useSearchParams()
 
     const typeFilter = searchParams.get("type")
 
@@ -38,6 +38,7 @@ export default function Vans() {
 
     function handleFilterChange(key, value) {
         setSearchParams(prevParams => {
+            console.log(prevParams)
             if (value === null) {
                 prevParams.delete(key)
             } else {

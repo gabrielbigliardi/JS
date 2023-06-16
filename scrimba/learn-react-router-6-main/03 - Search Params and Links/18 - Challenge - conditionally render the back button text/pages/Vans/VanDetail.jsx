@@ -14,6 +14,9 @@ export default function VanDetail() {
             .then(data => setVan(data.vans))
     }, [params.id])
 
+    const searchFilter = location.state?.search.split('=')[1] || 'all'
+    console.log(searchFilter)
+
     /**
      * Challenge: When a filter is applied, change the text of
      * the button to say "Back to luxury vans" (e.g.) instead of
@@ -31,7 +34,7 @@ export default function VanDetail() {
                 to={`..${search}`}
                 relative="path"
                 className="back-button"
-            >&larr; <span>Back to all vans</span></Link>
+            >&larr; <span>Back to {searchFilter} vans</span></Link>
             
             {van ? (
                 <div className="van-detail">
