@@ -2,7 +2,8 @@ import React from "react"
 import { useLoaderData } from "react-router-dom"
 
 export function loader() {
-    return "The data is here"
+  throw new Error("this is an error")
+    // return "The data is here"
 }
 
 export default function HomePage() {

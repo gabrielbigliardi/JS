@@ -11,6 +11,10 @@ import { getVans } from "../../api"
  *    this page.
  */
 
+export function loader() {
+    return "Vans data goes here"
+}
+
 export default function Vans() {
     const [searchParams, setSearchParams] = useSearchParams()
     const [vans, setVans] = React.useState([])
@@ -18,6 +22,8 @@ export default function Vans() {
     const [error, setError] = React.useState(null)
 
     const typeFilter = searchParams.get("type")
+
+
 
     React.useEffect(() => {
         async function loadVans() {

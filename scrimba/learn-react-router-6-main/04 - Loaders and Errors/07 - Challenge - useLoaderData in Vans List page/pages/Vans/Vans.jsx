@@ -1,16 +1,17 @@
 import React from "react"
-import { Link, useSearchParams } from "react-router-dom"
+import { Link, useSearchParams, useLoaderData } from "react-router-dom"
 import { getVans } from "../../api"
 
 /**
  * Challenge:
  * 1. Use the useLoaderData hook to pull in the data from the loader
  *    function and console.log it.
- * 2. TBA
+ * 2. Replace the string return from the loader, and instead call
+ *    the getVans function and return the result
  */
 
 export function loader() {
-    return "Vans data goes here"
+    return getVans()
 }
 
 export default function Vans() {
@@ -18,6 +19,9 @@ export default function Vans() {
     const [vans, setVans] = React.useState([])
     const [loading, setLoading] = React.useState(false)
     const [error, setError] = React.useState(null)
+
+    const data = useLoaderData()
+    console.log(data)
 
     const typeFilter = searchParams.get("type")
 
