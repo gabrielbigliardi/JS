@@ -49,14 +49,14 @@ const router = createBrowserRouter(createRoutesFromElements(
        * just have them `return null` (don't worry about checking
        * for authentication yet)
        */}
-      <Route index element={<Dashboard />} />
-      <Route path="income" element={<Income />} />
-      <Route path="reviews" element={<Reviews />} />
-      <Route path="vans" element={<HostVans />} />
-      <Route path="vans/:id" element={<HostVanDetail />}>
-        <Route index element={<HostVanInfo />} />
-        <Route path="pricing" element={<HostVanPricing />} />
-        <Route path="photos" element={<HostVanPhotos />} />
+      <Route loader={async () => null} index element={<Dashboard />} />
+      <Route loader={async () => null} path="income" element={<Income />} />
+      <Route loader={async () => null} path="reviews" element={<Reviews />} />
+      <Route loader={async () => null} path="vans" element={<HostVans />} />
+      <Route loader={async () => null} path="vans/:id" element={<HostVanDetail />}>
+        <Route loader={async () => null} index element={<HostVanInfo />} />
+        <Route loader={async () => null} path="pricing" element={<HostVanPricing />} />
+        <Route loader={async () => null} path="photos" element={<HostVanPhotos />} />
       </Route>
     </Route>
     <Route path="*" element={<NotFound />} />

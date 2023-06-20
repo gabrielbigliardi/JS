@@ -26,6 +26,9 @@ const router = createBrowserRouter(createRoutesFromElements(
          * Challenge: if the user isn't logged in, redirect them to
          * the login page
          */
+        if(!isLoggedIn) {
+          throw redirect("/login")
+        }
         return null
       }}
     />
