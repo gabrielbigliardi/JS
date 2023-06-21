@@ -1,5 +1,5 @@
 import React from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useLoaderData } from "react-router-dom"
 
 /**
  * Challenge: Pass a message from the requireAuth function
@@ -7,9 +7,19 @@ import { useNavigate } from "react-router-dom"
  * in an <h2> BELOW the <h1>. Give it a classname of "red" for
  * some quick styling - (I added the CSS already).
  */
+export function loader({ request }) {
+    // const loginMsg = useLoaderData()
+    // const msg = new URL(request)
+    // console.log(request)
+    return new URL(request.url).searchParams.get("msg")
+}
+
 
 export default function Login() {
     const [loginFormData, setLoginFormData] = React.useState({ email: "", password: "" })
+    const loginMsg = useLoaderData()
+    console.log(loginMsg)
+
 
     function handleSubmit(e) {
         e.preventDefault()
@@ -24,10 +34,11 @@ export default function Login() {
         }))
     }
 
+
     return (
         <div className="login-container">
             <h1>Sign in to your account</h1>
-            {/* Warning goes here. Give it a classname="red" */}
+            {loginMsg && <h2 className="red">{loginMsg}</h2>}
             <form onSubmit={handleSubmit} className="login-form">
                 <input
                     name="email"
