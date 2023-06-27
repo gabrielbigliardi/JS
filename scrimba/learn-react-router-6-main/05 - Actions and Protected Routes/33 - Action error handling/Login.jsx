@@ -1,5 +1,5 @@
 import React from "react"
-import { Form, useActionData } from "react-router-dom"
+import { Form, redirect, useActionData } from "react-router-dom"
 
 async function fakeLoginUser(creds) {
     if (creds.email === "b@b.com" && creds.password === "p123") {
@@ -23,7 +23,14 @@ export async function action({ request }) {
     const formData = await request.formData()
     const email = formData.get("email")
     const password = formData.get("password")
-    // ??
+    try {
+        const user = await fakeLoginUser({email, password})
+        return redirect('/protected')
+        
+        
+    } catch (e) {
+        return e.message
+    }
 }
 
 export default function Login() {

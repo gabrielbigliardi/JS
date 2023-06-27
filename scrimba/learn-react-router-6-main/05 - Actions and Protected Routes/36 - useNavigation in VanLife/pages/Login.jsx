@@ -4,7 +4,8 @@ import {
     useNavigate,
     Form,
     redirect,
-    useActionData
+    useActionData,
+    useNavigation
 } from "react-router-dom"
 import { loginUser } from "../api"
 
@@ -31,30 +32,10 @@ export async function action({ request }) {
     }
 }
 
-/**
- * Challenge: Use useNavigation in order to track the current
- * status of the form submission and remove all the `status`
- * tracking we were handling manually in state.
- * 
- * Then, you should be able to completely remove the handleSubmit
- * function 🎉
- */
-
 export default function Login() {
-    const [status, setStatus] = React.useState("idle")
     const errorMessage = useActionData()
     const message = useLoaderData()
-    const navigate = useNavigate()
-
-    function handleSubmit(e) {
-        e.preventDefault()
-        setStatus("submitting")
-        loginUser(loginFormData)
-            .then(data => {
-                navigate("/host", { replace: true })
-            })
-            .finally(() => setStatus("idle"))
-    }
+    const navigation = useNavigation().state
 
     return (
         <div className="login-container">
@@ -78,9 +59,9 @@ export default function Login() {
                     placeholder="Password"
                 />
                 <button
-                    disabled={status === "submitting"}
+                    disabled={navigation === "submitting"}
                 >
-                    {status === "submitting"
+                    {navigation === "submitting"
                         ? "Logging in..."
                         : "Log in"
                     }

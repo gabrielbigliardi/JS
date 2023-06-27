@@ -8,13 +8,6 @@ export function loader({ request }) {
 
 /**
  * Challenge: Code the sad path 🙁
- * 3. Add a `status` state and default it to "idle". When the 
- *    login form begins submitting, set it to "submitting". When
- *    it's done submitting (whether successful or not), set it 
- *    to "idle" again.
- * 4. Disable the button when the `status` state is "submitting"
- *    (this may require some Googling if you haven't done this
- *    before).
  * 5. Add an `error` state and default it to `null`. When the
  *    form is submitted, reset the errors to `null`. If there's
  *    an error from `loginUser` (add a .catch(err => {...}) in 
@@ -27,11 +20,18 @@ export function loader({ request }) {
 export default function Login() {
     const [loginFormData, setLoginFormData] = React.useState({ email: "", password: "" })
     const message = useLoaderData()
+    const [status, setStatus] = React.useState("idle")
+    const [error, setError] = React.useState(null)
 
     function handleSubmit(e) {
         e.preventDefault()
+        setStatus("submitting")
+        setError(null)
         loginUser(loginFormData)
             .then(data => console.log(data))
+            .catch(err => setError(err))
+            .finally(() => setStatus("idle"))
+       
     }
 
     function handleChange(e) {
@@ -46,6 +46,8 @@ export default function Login() {
         <div className="login-container">
             <h1>Sign in to your account</h1>
             {message && <h3 className="red">{message}</h3>}
+            {error && <h3 className="red">{error.message}</h3>}
+
             <form onSubmit={handleSubmit} className="login-form">
                 <input
                     name="email"
@@ -61,7 +63,18 @@ export default function Login() {
                     placeholder="Password"
                     value={loginFormData.password}
                 />
-                <button>Log in</button>
+                {/* {
+                    status === "submitting" ?
+                    <button disabled={true}>Log in</button> :
+                    <button disabled={false}>Mog in</button>
+                } */}
+                <button disabled={status === "submitting"}>
+                    {
+                        status === "submitting" ?
+                        "Logging in" : "Log in"
+                    }
+                </button>
+                
             </form>
         </div>
     )
