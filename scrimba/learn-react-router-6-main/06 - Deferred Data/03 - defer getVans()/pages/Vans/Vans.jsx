@@ -1,9 +1,10 @@
 import React from "react"
-import { Link, useSearchParams, useLoaderData } from "react-router-dom"
+import { Link, useSearchParams, useLoaderData, defer } from "react-router-dom"
 import { getVans } from "../../api"
 
 export function loader() {
-    return getVans()
+    const vansPromise = getVans()
+    return defer({vans: vansPromise})
 }
 
 /**
@@ -22,6 +23,7 @@ export default function Vans() {
     const [searchParams, setSearchParams] = useSearchParams()
     const [error, setError] = React.useState(null)
     const vans = useLoaderData()
+    console.log(vans)
 
     const typeFilter = searchParams.get("type")
 
