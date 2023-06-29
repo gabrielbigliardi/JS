@@ -5,7 +5,7 @@ export async function getVans(id) {
         throw {
             message: "Failed to fetch vans",
             statusText: res.statusText,
-            status: res.status
+            status: res.statusW
         }
     }
     const data = await res.json()
