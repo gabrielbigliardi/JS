@@ -1,6 +1,3 @@
-# About
-
-
 ### About
 
 This repository contains the start of my journey on web-development.
