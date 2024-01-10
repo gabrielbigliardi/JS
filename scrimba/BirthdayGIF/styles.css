@@ -63,7 +63,7 @@ h1, h2, h3, h4, p {
 }
 
 #gift-img-happy:hover {
-    background-image: url("images/happy.gif");
+    background-image: url("images/happyyoda.gif");
 }
 
 #gift-img-hot:hover {
@@ -75,7 +75,7 @@ h1, h2, h3, h4, p {
 }
 
 #gift-img-badass:hover {
-    background-image: url("images/scott.gif");
+    background-image: url("images/skate_dog.gif");
 }
 
 #gift-img-cheers:hover {
